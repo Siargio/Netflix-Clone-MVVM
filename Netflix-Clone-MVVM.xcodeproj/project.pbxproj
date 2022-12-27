@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ECBC4607295B2F2C00164B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC4606295B2F2C00164B5A /* AppDelegate.swift */; };
-		ECBC4609295B2F2C00164B5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC4608295B2F2C00164B5A /* SceneDelegate.swift */; };
 		ECBC460B295B2F2C00164B5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC460A295B2F2C00164B5A /* ViewController.swift */; };
-		ECBC460E295B2F2C00164B5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBC460C295B2F2C00164B5A /* Main.storyboard */; };
 		ECBC4610295B2F2E00164B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBC460F295B2F2E00164B5A /* Assets.xcassets */; };
 		ECBC4613295B2F2E00164B5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBC4611295B2F2E00164B5A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,9 +16,7 @@
 /* Begin PBXFileReference section */
 		ECBC4603295B2F2C00164B5A /* Netflix-Clone-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix-Clone-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBC4606295B2F2C00164B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECBC4608295B2F2C00164B5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ECBC460A295B2F2C00164B5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ECBC460D295B2F2C00164B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECBC460F295B2F2E00164B5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBC4612295B2F2E00164B5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECBC4614295B2F2E00164B5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +52,29 @@
 		ECBC4605295B2F2C00164B5A /* Netflix-Clone-MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				ECBC4606295B2F2C00164B5A /* AppDelegate.swift */,
-				ECBC4608295B2F2C00164B5A /* SceneDelegate.swift */,
+				ECBC461A295B32F500164B5A /* App */,
 				ECBC460A295B2F2C00164B5A /* ViewController.swift */,
-				ECBC460C295B2F2C00164B5A /* Main.storyboard */,
+				ECBC461B295B330000164B5A /* Resources */,
+			);
+			path = "Netflix-Clone-MVVM";
+			sourceTree = "<group>";
+		};
+		ECBC461A295B32F500164B5A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ECBC4606295B2F2C00164B5A /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ECBC461B295B330000164B5A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				ECBC460F295B2F2E00164B5A /* Assets.xcassets */,
 				ECBC4611295B2F2E00164B5A /* LaunchScreen.storyboard */,
 				ECBC4614295B2F2E00164B5A /* Info.plist */,
 			);
-			path = "Netflix-Clone-MVVM";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +137,6 @@
 			files = (
 				ECBC4613295B2F2E00164B5A /* LaunchScreen.storyboard in Resources */,
 				ECBC4610295B2F2E00164B5A /* Assets.xcassets in Resources */,
-				ECBC460E295B2F2C00164B5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,21 +149,12 @@
 			files = (
 				ECBC460B295B2F2C00164B5A /* ViewController.swift in Sources */,
 				ECBC4607295B2F2C00164B5A /* AppDelegate.swift in Sources */,
-				ECBC4609295B2F2C00164B5A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ECBC460C295B2F2C00164B5A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECBC460D295B2F2C00164B5A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ECBC4611295B2F2E00164B5A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,12 +289,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3496F3A4HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Netflix-Clone-MVVM/Info.plist";
+				INFOPLIST_FILE = "Netflix-Clone-MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,6 +303,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Netflix-Clone-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,12 +321,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3496F3A4HL;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Netflix-Clone-MVVM/Info.plist";
+				INFOPLIST_FILE = "Netflix-Clone-MVVM/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +335,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.my.Netflix-Clone-MVVM";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
