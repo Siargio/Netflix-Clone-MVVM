@@ -45,10 +45,8 @@ class HeroHeaderUIView: UIView {
         super.init(frame: frame)
         setupHierarchy()
         addGradient()
-        addSubview(playButton)
-        addSubview(downloadButton)
+        setupHierarchyButton()
         setupLayout()
-
     }
 
     required init?(coder: NSCoder) {
@@ -59,6 +57,11 @@ class HeroHeaderUIView: UIView {
 
     func setupHierarchy() {
         addSubview(heroImageView)
+    }
+
+    func setupHierarchyButton() {
+        addSubview(playButton)
+        addSubview(downloadButton)
     }
 
     func setupLayout() {
