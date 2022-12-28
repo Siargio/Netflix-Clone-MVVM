@@ -17,6 +17,10 @@
 		ECBC4624295B366E00164B5A /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC4623295B366E00164B5A /* DownloadsViewController.swift */; };
 		ECBC4629295B515F00164B5A /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC4628295B515F00164B5A /* CollectionViewTableViewCell.swift */; };
 		ECBC462B295B595B00164B5A /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC462A295B595B00164B5A /* HeroHeaderUIView.swift */; };
+		ECCAB4B8295C357A00190CCE /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4B7295C357A00190CCE /* APICaller.swift */; };
+		ECCAB4BA295C496A00190CCE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4B9295C496A00190CCE /* Title.swift */; };
+		ECCAB4BC295C530500190CCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4BB295C530500190CCE /* Extensions.swift */; };
+		ECCAB4C0295C5EDC00190CCE /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4BF295C5EDC00190CCE /* TitleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		ECBC4623295B366E00164B5A /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		ECBC4628295B515F00164B5A /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		ECBC462A295B595B00164B5A /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
+		ECCAB4B7295C357A00190CCE /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		ECCAB4B9295C496A00190CCE /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		ECCAB4BB295C530500190CCE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ECCAB4BF295C5EDC00190CCE /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBC461A295B32F500164B5A /* App */,
+				ECCAB4B6295C356100190CCE /* Managers */,
 				ECBC4627295B510700164B5A /* Models */,
 				ECBC4625295B50F700164B5A /* Views */,
 				ECBC4626295B510000164B5A /* ViewModels */,
@@ -88,6 +97,7 @@
 				ECBC460F295B2F2E00164B5A /* Assets.xcassets */,
 				ECBC4611295B2F2E00164B5A /* LaunchScreen.storyboard */,
 				ECBC4614295B2F2E00164B5A /* Info.plist */,
+				ECCAB4BB295C530500190CCE /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -109,6 +119,7 @@
 			children = (
 				ECBC4628295B515F00164B5A /* CollectionViewTableViewCell.swift */,
 				ECBC462A295B595B00164B5A /* HeroHeaderUIView.swift */,
+				ECCAB4BF295C5EDC00190CCE /* TitleCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,8 +134,17 @@
 		ECBC4627295B510700164B5A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				ECCAB4B9295C496A00190CCE /* Title.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		ECCAB4B6295C356100190CCE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ECCAB4B7295C357A00190CCE /* APICaller.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,9 +221,13 @@
 				ECBC462B295B595B00164B5A /* HeroHeaderUIView.swift in Sources */,
 				ECBC4620295B362E00164B5A /* UpcomingViewController.swift in Sources */,
 				ECBC4624295B366E00164B5A /* DownloadsViewController.swift in Sources */,
+				ECCAB4BA295C496A00190CCE /* Title.swift in Sources */,
+				ECCAB4B8295C357A00190CCE /* APICaller.swift in Sources */,
 				ECBC4629295B515F00164B5A /* CollectionViewTableViewCell.swift in Sources */,
 				ECBC460B295B2F2C00164B5A /* MainTabBarViewController.swift in Sources */,
 				ECBC4607295B2F2C00164B5A /* AppDelegate.swift in Sources */,
+				ECCAB4C0295C5EDC00190CCE /* TitleCollectionViewCell.swift in Sources */,
+				ECCAB4BC295C530500190CCE /* Extensions.swift in Sources */,
 				ECBC461E295B35EA00164B5A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
