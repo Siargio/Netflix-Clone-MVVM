@@ -27,6 +27,7 @@ class HomeViewController: UIViewController {
         setupLayout()
         delegate()
         headerTableView()
+        configureNavBar()
     }
 
     //MARK: - Setup
@@ -34,6 +35,30 @@ class HomeViewController: UIViewController {
     func delegate() {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
+    }
+
+    private func configureNavBar() {
+        var image = UIImage(named: "netflixLogo")
+        image = image?.withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: image,
+            style: .done,
+            target: self,
+            action: nil)
+
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(
+                image: UIImage(systemName: "person"),
+                style: .done,
+                target: self,
+                action: nil),
+            UIBarButtonItem(
+                image: UIImage(systemName: "play.rectangle"),
+                style: .done,
+                target: self,
+                action: nil)
+        ]
+        navigationController?.navigationBar.tintColor = .white
     }
 
     func headerTableView() {
@@ -84,5 +109,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         40
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let defaultOffset = view.safeAreaInsets.top
+        let offset = scrollView.contentOffset.y + defaultOffset
+
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
 }
