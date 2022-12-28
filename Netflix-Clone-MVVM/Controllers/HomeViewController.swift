@@ -9,7 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    let sectionTitles: [String] = ["Trending Movies", "Popular", "Trending Tv", "Upcoming Movies", "Top rated"]
+    let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movies", "Top rated"]
 
     //MARK: - UIElements
 
@@ -70,6 +70,20 @@ class HomeViewController: UIViewController {
             width: view.bounds.width,
             height: 450))
         homeFeedTable.tableHeaderView = headerView
+
+        getTrendingMovies()
+    }
+
+    private func getTrendingMovies() {
+        
+        APICaller.shared.getTrendingMovies { results in
+            switch results {
+            case .success(let movies):
+                print(movies)
+            case.failure(let error):
+                print(error)
+            }
+        }
     }
 
     func setupHierarchy() {
@@ -122,7 +136,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             width: 100,
             height: header.bounds.height)
         header.textLabel?.textColor = .white
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
