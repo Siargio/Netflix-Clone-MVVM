@@ -21,6 +21,8 @@
 		ECCAB4BA295C496A00190CCE /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4B9295C496A00190CCE /* Title.swift */; };
 		ECCAB4BC295C530500190CCE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4BB295C530500190CCE /* Extensions.swift */; };
 		ECCAB4C0295C5EDC00190CCE /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECCAB4BF295C5EDC00190CCE /* TitleCollectionViewCell.swift */; };
+		ECCAB4C3295C77B200190CCE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = ECCAB4C2295C77B200190CCE /* SDWebImage */; };
+		ECCAB4C5295C77B200190CCE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECCAB4C4295C77B200190CCE /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECCAB4C5295C77B200190CCE /* SDWebImageMapKit in Frameworks */,
+				ECCAB4C3295C77B200190CCE /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +167,10 @@
 			dependencies = (
 			);
 			name = "Netflix-Clone-MVVM";
+			packageProductDependencies = (
+				ECCAB4C2295C77B200190CCE /* SDWebImage */,
+				ECCAB4C4295C77B200190CCE /* SDWebImageMapKit */,
+			);
 			productName = "Netflix-Clone-MVVM";
 			productReference = ECBC4603295B2F2C00164B5A /* Netflix-Clone-MVVM.app */;
 			productType = "com.apple.product-type.application";
@@ -191,6 +199,9 @@
 				Base,
 			);
 			mainGroup = ECBC45FA295B2F2C00164B5A;
+			packageReferences = (
+				ECCAB4C1295C77B200190CCE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = ECBC4604295B2F2C00164B5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -296,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -350,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -446,6 +457,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECCAB4C1295C77B200190CCE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECCAB4C2295C77B200190CCE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCAB4C1295C77B200190CCE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		ECCAB4C4295C77B200190CCE /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCAB4C1295C77B200190CCE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ECBC45FB295B2F2C00164B5A /* Project object */;
 }
