@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EC4625B7295E167200AB6843 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4625B6295E167200AB6843 /* TitleTableViewCell.swift */; };
 		EC4625B9295E1B5700AB6843 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4625B8295E1B5700AB6843 /* TitleViewModel.swift */; };
+		EC96BA75296201C000191AB4 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC96BA74296201C000191AB4 /* SearchResultsViewController.swift */; };
 		ECBC4607295B2F2C00164B5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC4606295B2F2C00164B5A /* AppDelegate.swift */; };
 		ECBC460B295B2F2C00164B5A /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC460A295B2F2C00164B5A /* MainTabBarViewController.swift */; };
 		ECBC4610295B2F2E00164B5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBC460F295B2F2E00164B5A /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		EC4625B6295E167200AB6843 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		EC4625B8295E1B5700AB6843 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
+		EC96BA74296201C000191AB4 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		ECBC4603295B2F2C00164B5A /* Netflix-Clone-MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Netflix-Clone-MVVM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBC4606295B2F2C00164B5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBC460A295B2F2C00164B5A /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC96BA762962020300191AB4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				ECBC460A295B2F2C00164B5A /* MainTabBarViewController.swift */,
+				ECBC461D295B35EA00164B5A /* HomeViewController.swift */,
+				ECBC461F295B362E00164B5A /* UpcomingViewController.swift */,
+				ECBC4621295B364B00164B5A /* SearchViewController.swift */,
+				ECBC4623295B366E00164B5A /* DownloadsViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EC96BA772962022E00191AB4 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				EC96BA74296201C000191AB4 /* SearchResultsViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		ECBC45FA295B2F2C00164B5A = {
 			isa = PBXGroup;
 			children = (
@@ -113,11 +135,8 @@
 		ECBC461C295B35B500164B5A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ECBC460A295B2F2C00164B5A /* MainTabBarViewController.swift */,
-				ECBC461D295B35EA00164B5A /* HomeViewController.swift */,
-				ECBC461F295B362E00164B5A /* UpcomingViewController.swift */,
-				ECBC4621295B364B00164B5A /* SearchViewController.swift */,
-				ECBC4623295B366E00164B5A /* DownloadsViewController.swift */,
+				EC96BA772962022E00191AB4 /* General */,
+				EC96BA762962020300191AB4 /* Core */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -238,6 +257,7 @@
 				ECBC462B295B595B00164B5A /* HeroHeaderUIView.swift in Sources */,
 				EC4625B7295E167200AB6843 /* TitleTableViewCell.swift in Sources */,
 				ECBC4620295B362E00164B5A /* UpcomingViewController.swift in Sources */,
+				EC96BA75296201C000191AB4 /* SearchResultsViewController.swift in Sources */,
 				ECBC4624295B366E00164B5A /* DownloadsViewController.swift in Sources */,
 				ECCAB4BA295C496A00190CCE /* Title.swift in Sources */,
 				ECCAB4B8295C357A00190CCE /* APICaller.swift in Sources */,
