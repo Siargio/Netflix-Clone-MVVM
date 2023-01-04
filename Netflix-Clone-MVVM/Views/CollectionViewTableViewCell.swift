@@ -32,7 +32,6 @@ class CollectionViewTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.backgroundColor = .systemPink
         collectionViewDelegate()
         setupHierarchy()
     }
@@ -63,9 +62,14 @@ class CollectionViewTableViewCell: UITableViewCell {
             self?.collectionView.reloadData()
         }
     }
+
+    private func downloadTitleAt(indexPath: IndexPath) {
+
+        print("Downloading \(titles[indexPath.row].original_title)")
+    }
 }
 
-    //MARK: - UICollectionViewDataSource
+//MARK: - UICollectionViewDataSource
 
 extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,5 +113,18 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
                 print(error.localizedDescription)
             }
         }
+    }
+
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
+
+        let config = UIContextMenuConfiguration(
+            identifier: nil,
+            previewProvider: nil) { _ in
+                let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
+                    print("Download tapper")
+                }
+                return UIMenu(title: "", identifier: nil, options: .displayInline, children: [downloadAction])
+            }
+        return config
     }
 }
