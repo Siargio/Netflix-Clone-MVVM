@@ -32,6 +32,7 @@ class CollectionViewTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.backgroundColor = .systemPink
         collectionViewDelegate()
         setupHierarchy()
     }
@@ -68,7 +69,7 @@ class CollectionViewTableViewCell: UITableViewCell {
         DataPersistenceManager.shared.downloadTitleWith(model: titles[indexPath.row]) { result in
             switch result {
             case .success():
-                print("downloaded to Database")
+                NotificationCenter.default.post(name: NSNotification.Name("downloaded"), object: nil)
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -122,15 +123,15 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         }
     }
 
-    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemsAt indexPaths: [IndexPath], point: CGPoint) -> UIContextMenuConfiguration? {
+    func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
 
         let config = UIContextMenuConfiguration(
             identifier: nil,
-            previewProvider: nil) { _ in
+            previewProvider: nil) { [weak self] _ in
                 let downloadAction = UIAction(title: "Download", subtitle: nil, image: nil, identifier: nil, discoverabilityTitle: nil, state: .off) { _ in
-                    print("Download tapper")
+                    self?.downloadTitleAt(indexPath: indexPath)
                 }
-                return UIMenu(title: "", identifier: nil, options: .displayInline, children: [downloadAction])
+                return UIMenu(title: "", image: nil, identifier: nil, options: .displayInline, children: [downloadAction])
             }
         return config
     }

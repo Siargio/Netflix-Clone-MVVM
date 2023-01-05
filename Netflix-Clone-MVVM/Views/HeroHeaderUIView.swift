@@ -13,7 +13,7 @@ class HeroHeaderUIView: UIView {
 
     private let heroImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = UIImage(named: "12")
         return imageView
@@ -68,12 +68,12 @@ class HeroHeaderUIView: UIView {
         heroImageView.frame = bounds
 
         NSLayoutConstraint.activate([
-            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 70),
-            playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            playButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 50),
+            playButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             playButton.widthAnchor.constraint(equalToConstant: 100),
 
-            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -70),
-            downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50),
+            downloadButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -50),
+            downloadButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             downloadButton.widthAnchor.constraint(equalToConstant: 100)
         ])
     }

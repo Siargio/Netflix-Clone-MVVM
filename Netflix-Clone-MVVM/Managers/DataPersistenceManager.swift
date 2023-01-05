@@ -54,15 +54,12 @@ class DataPersistenceManager {
         }
 
         let context = appDelegate.persistentContainer.viewContext
-
         let request: NSFetchRequest<TitleItem>
-
         request = TitleItem.fetchRequest()
 
         do {
             let titles = try context.fetch(request)
             completion(.success(titles))
-
         } catch {
             completion(.failure(DatabasError.failedToFetchData))
         }
@@ -75,8 +72,6 @@ class DataPersistenceManager {
             }
 
             let context = appDelegate.persistentContainer.viewContext
-
-
             context.delete(model)
 
             do {
@@ -85,6 +80,5 @@ class DataPersistenceManager {
             } catch {
                 completion(.failure(DatabasError.failedToDeleteData))
             }
-
         }
 }

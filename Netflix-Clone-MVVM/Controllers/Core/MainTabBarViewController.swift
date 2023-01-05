@@ -41,9 +41,4 @@ class MainTabBarViewController: UITabBarController {
 
         setViewControllers(controllers, animated: true)
     }
-
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print("Будет выбран контроллер - \(viewController.title ?? "")")
-        return true
-    }
 }
