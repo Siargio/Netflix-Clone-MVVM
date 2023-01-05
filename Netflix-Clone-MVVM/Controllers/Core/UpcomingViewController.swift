@@ -7,7 +7,9 @@
 
 import UIKit
 
-class UpcomingViewController: UIViewController {
+final class UpcomingViewController: UIViewController {
+    
+    // MARK: - Properties
 
     private var titles: [Title] = [Title]()
     
@@ -37,6 +39,7 @@ class UpcomingViewController: UIViewController {
         title = "Upcoming"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.tintColor = .white
     }
 
     func delegate() {

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabBarViewController: UITabBarController {
+final class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +40,5 @@ class MainTabBarViewController: UITabBarController {
         let controllers = [HomeViewController, UpcomingViewController, SearchViewController, DownloadsViewController]
 
         setViewControllers(controllers, animated: true)
-    }
-
-    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
-        print("Будет выбран контроллер - \(viewController.title ?? "")")
-        return true
     }
 }
