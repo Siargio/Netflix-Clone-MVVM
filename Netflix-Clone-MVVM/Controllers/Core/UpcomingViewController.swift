@@ -7,7 +7,9 @@
 
 import UIKit
 
-class UpcomingViewController: UIViewController {
+final class UpcomingViewController: UIViewController {
+    
+    // MARK: - Properties
 
     private var titles: [Title] = [Title]()
     

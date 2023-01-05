@@ -11,7 +11,9 @@ protocol SearchResultsViewControllerDelegate: AnyObject {
     func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel)
 }
 
-class SearchResultsViewController: UIViewController {
+final class SearchResultsViewController: UIViewController {
+    
+    // MARK: - Properties
 
     public weak var delegate: SearchResultsViewControllerDelegate?
     public var titles: [Title] = [Title]()

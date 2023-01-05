@@ -7,7 +7,9 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+final class SearchViewController: UIViewController {
+
+    // MARK: - Properties
 
     private var titles: [Title] = [Title]()
 

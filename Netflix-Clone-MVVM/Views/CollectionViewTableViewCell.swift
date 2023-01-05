@@ -11,7 +11,9 @@ protocol CollectionViewTableViewCellDelegate: AnyObject {
     func collectionViewTableViewCellDidTapCell(_ cell: CollectionViewTableViewCell, viewModel: TitlePreviewViewModel)
 }
 
-class CollectionViewTableViewCell: UITableViewCell {
+final class CollectionViewTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
 
     static let identifier = "CollectionViewTableViewCell"
     weak var delegate: CollectionViewTableViewCellDelegate?

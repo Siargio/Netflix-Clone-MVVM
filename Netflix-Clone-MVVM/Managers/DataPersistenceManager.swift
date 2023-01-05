@@ -9,16 +9,19 @@ import Foundation
 import UIKit
 import CoreData
 
-class DataPersistenceManager {
+final class DataPersistenceManager {
 
     enum DatabasError: Error {
         case failedToSaveData
         case failedToFetchData
         case failedToDeleteData
     }
+    // MARK: - Properties
 
     static let shared = DataPersistenceManager()
 
+    // MARK: - Setups
+    
     func downloadTitleWith(model: Title, completion: @escaping (Result<Void, Error>) -> Void) {
 
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {

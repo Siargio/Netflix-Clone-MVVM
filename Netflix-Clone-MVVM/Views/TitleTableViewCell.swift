@@ -7,7 +7,9 @@
 
 import UIKit
 
-class TitleTableViewCell: UITableViewCell {
+final class TitleTableViewCell: UITableViewCell {
+    
+    // MARK: - Properties
 
     static let identifier = "TitleTableViewCell"
 

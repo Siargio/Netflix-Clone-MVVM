@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeroHeaderUIView: UIView {
+final class HeroHeaderUIView: UIView {
 
     //MARK: - UIElements
 

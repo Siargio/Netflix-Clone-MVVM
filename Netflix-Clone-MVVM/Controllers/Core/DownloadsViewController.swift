@@ -7,7 +7,9 @@
 
 import UIKit
 
-class DownloadsViewController: UIViewController {
+final class DownloadsViewController: UIViewController {
+    
+    // MARK: - Properties
 
     private var titles: [TitleItem] = [TitleItem]()
 

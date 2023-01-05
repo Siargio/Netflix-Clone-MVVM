@@ -15,7 +15,9 @@ enum Sections: Int {
     case TopRated = 4
 }
 
-class HomeViewController: UIViewController {
+final class HomeViewController: UIViewController {
+    
+    // MARK: - Properties
 
     private var randomTrendingMovie: Title?
     private var headerView: HeroHeaderUIView?
